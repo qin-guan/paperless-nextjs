@@ -5,7 +5,7 @@ export default function RevalidateButton({ username }: { username: string }) {
   async function revalidate() {
     'use server'
 
-    revalidatePath(username)
+    revalidatePath(`/p/${username}`)
     return true
   }
 
