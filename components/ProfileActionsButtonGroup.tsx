@@ -7,7 +7,7 @@ export default function ProfileActionsButtonGroup({username}: { username: string
   }
 
   function share() {
-    navigator.clipboard.writeText(`https://paperless-next.pages.dev/p/${username}`)
+    navigator.clipboard.writeText(`https://paperless-nextjs.pages.dev/p/${username}`)
   }
 
   return (
