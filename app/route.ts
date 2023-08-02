@@ -1,5 +1,5 @@
-import { redirect } from 'next/navigation'
+import { NextResponse } from 'next/server'
 
 export async function GET() {
-  return redirect('https://paperless.pages.dev')
+  return NextResponse.redirect('https://paperless.pages.dev')
 }
