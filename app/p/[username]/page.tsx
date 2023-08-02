@@ -4,13 +4,11 @@ import { Profile, profileStorage } from "@/lib/profile"
 export const runtime = 'edge'
 
 export default async function Home({ params }: { params: { username: string } }) {
-  const data = await profileStorage.getItem<Profile>(params.username)
-
-  console.log(data)
+  const data = await profileStorage.getMeta(params.username) as Profile | null
 
   return (
     <main className="p-6 container mx-auto">
-      {data ? (
+      {data?.email ? (
         <>
           <section className="mt-10">
             <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
