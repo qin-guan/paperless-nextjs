@@ -1,4 +1,6 @@
+import { Button } from "@/components/Button"
 import ProfileActionsButtonGroup from "@/components/ProfileActionsButtonGroup"
+import RevalidateButton from "@/components/RevalidateButton"
 import { Profile, profileStorage } from "@/lib/profile"
 
 export const runtime = 'edge'
@@ -55,6 +57,9 @@ export default async function Home({ params }: { params: { username: string } })
       ) : (
         <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
           No data available
+          <br />
+          <br />
+          <RevalidateButton username={params.username} />
         </h1>
       )}
     </main>
