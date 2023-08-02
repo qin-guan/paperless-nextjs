@@ -10,7 +10,7 @@ export default async function Home({ params }: { params: { username: string } })
 
   return (
     <main className="p-6 container mx-auto">
-      {data?.email ? (
+      {data?.username ? (
         <>
           <section className="mt-10">
             <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
