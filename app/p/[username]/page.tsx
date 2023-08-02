@@ -6,6 +6,8 @@ export const runtime = 'edge'
 export default async function Home({ params }: { params: { username: string } }) {
   const data = await profileStorage.getItem<Profile>(params.username)
 
+  console.log(data)
+
   return (
     <main className="p-6 container mx-auto">
       {data ? (
